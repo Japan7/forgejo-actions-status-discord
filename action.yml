@@ -58,6 +58,9 @@ inputs:
     description: "Avoid appending timestamp"
     required: false
     default: "false"
+  server_url:
+    description: "Overrides GitHub server url"
+    required: false
 
 runs:
   using: "node20"

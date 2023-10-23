@@ -15,6 +15,7 @@ export interface Inputs {
     nocontext: boolean
     noprefix: boolean
     notimestamp: boolean
+    server_url: string
 }
 
 interface StatusOption {
@@ -68,7 +69,8 @@ export function getInputs(): Inputs {
         avatar_url: core.getInput('avatar_url').trim(),
         nocontext: nocontext,
         noprefix: noprefix,
-        notimestamp: stob(core.getInput('notimestamp'))
+        notimestamp: stob(core.getInput('notimestamp')),
+        server_url: core.getInput('server_url').trim()
     }
 
     // validate
